@@ -8,9 +8,12 @@ These examples cover:
 * Client Credentials flow
 * Implicit Grant flow
 
-## Request for top artists 
+## Request for top artists 
 ```php
-curl -X "GET" "https://api.spotify.com/v1/me/top/artists" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQC-9smGpoLUfEuLFl6vp6Pta0U5Xdnn1LJjJ7AJ7tZJVxh2sNloBtficDZyKED-yh_j5PbSgWnjexi2rGLjbqNnR44MwREuBRdy9sBveL8-QtuB9jdrCNVxGgtxIy7MirjsPpYEhqt3_ZIRhPM"
+curl -X "GET" "https://api.spotify.com/v1/me/top/artists" 
+-H "Accept: application/json" 
+-H "Content-Type: application/json" 
+-H "Authorization: Bearer BQC-9smGpoLUfEuLFl6vp6Pta0U5Xdnn1LJjJ7AJ7tZJVxh2sNloBtficDZyKED-yh_j5PbSgWnjexi2rGLjbqNnR44MwREuBRdy9sBveL8-QtuB9jdrCNVxGgtxIy7MirjsPpYEhqt3_ZIRhPM"
 ```
 
 ## Installation
