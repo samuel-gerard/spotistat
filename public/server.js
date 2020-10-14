@@ -4,6 +4,9 @@
 	 * @return Object
 	 */
 
+	var CURRENT_PERIOD = 'short_term';
+	var CURRENT_LIMIT = '10';
+
 	function getHashParams() {
 		var hashParams = {};
 		var e,
@@ -15,9 +18,9 @@
 		return hashParams;
 	}
 
-	function retrieveTracks(timeRangeSlug, domNumber, domPeriod) {
+	function retrieveTracks() {
 		$.ajax({
-			url: `https://api.spotify.com/v1/me/top/tracks?limit=50&time_range=${timeRangeSlug}`,
+			url: `https://api.spotify.com/v1/me/top/tracks?limit=${CURRENT_LIMIT}&time_range=${CURRENT_PERIOD}`,
 			headers: {
 				Authorization: 'Bearer ' + access_token
 			},
@@ -133,7 +136,7 @@
 				success: function (response) {
 					$('#login').hide();
 					$('#loggedin').show();
-					retrieveTracks('short_term', 1, 'LAST MONTH')
+					retrieveTracks()
 				}
 			});
 		} else {
@@ -143,15 +146,23 @@
 		}
 
 		$('#short_term').on('click', function() {
-			retrieveTracks('short_term', 1, 'LAST MONTH')
+			CURRENT_PERIOD = 'short_term';
+			retrieveTracks()
 		});
 
 		$('#medium_term').on('click', function() {
-			retrieveTracks('medium_term', 2, 'LAST 6 MONTHS')
+			CURRENT_PERIOD = 'medium_term';
+			retrieveTracks()
 		});
 
 		$('#long_term').on('click', function() {
-			retrieveTracks('long_term', 3, 'ALL TIME')
+			CURRENT_PERIOD = 'long_term';
+			retrieveTracks()
+		});
+
+		$('#count-tracks').on('change', function() {
+			CURRENT_LIMIT = $('#count-tracks option:selected').val()
+			retrieveTracks()
 		});
 
 	}
