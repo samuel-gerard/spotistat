@@ -22,14 +22,14 @@
 				Authorization: 'Bearer ' + access_token
 			},
 			success: function (response) {
-				
 				var data = {
 					trackList: response.items,
 				};
 
-				let displayTracks = formatTracksData(data.trackList)
-				
-				displayTrackStats(displayTracks)
+				let displayTracks = formatTracksData(data.trackList);
+
+				clearStats();
+				displayTrackStats(displayTracks);
 			},
 		});
 	}
@@ -74,10 +74,10 @@
 			trackDiv.classList.add('track-info');
 
 			trackDiv.appendChild(displayTrackName(displayTracks[i]));
-			trackDiv.appendChild(displayTrackImage(displayTracks[i]));
 			trackDiv.appendChild(displayTrackArtists(displayTracks[i]));
+			trackDiv.appendChild(displayTrackImage(displayTracks[i]));
 
-			document.body.appendChild(trackDiv);
+			$('.container-spotistat').append(trackDiv);
 		}
 	}
 
@@ -110,6 +110,11 @@
 		return trackArtistsDiv;
 	}
 
+	function clearStats()
+	{
+		$('.container-spotistat').empty();
+	}
+
 	var params = getHashParams();
 
 	var access_token = params.access_token,
@@ -128,6 +133,7 @@
 				success: function (response) {
 					$('#login').hide();
 					$('#loggedin').show();
+					retrieveTracks('short_term', 1, 'LAST MONTH')
 				}
 			});
 		} else {
@@ -136,8 +142,17 @@
 			$('#loggedin').hide();
 		}
 
-		document.getElementById('short_term').addEventListener('click', retrieveTracks('short_term', 1, 'LAST MONTH'), false);
-		document.getElementById('medium_term').addEventListener('click', retrieveTracks('medium_term', 2, 'LAST 6 MONTHS'), false);
-		document.getElementById('long_term').addEventListener('click', retrieveTracks('long_term', 3, 'ALL TIME'), false);
+		$('#short_term').on('click', function() {
+			retrieveTracks('short_term', 1, 'LAST MONTH')
+		});
+
+		$('#medium_term').on('click', function() {
+			retrieveTracks('medium_term', 2, 'LAST 6 MONTHS')
+		});
+
+		$('#long_term').on('click', function() {
+			retrieveTracks('long_term', 3, 'ALL TIME')
+		});
+
 	}
 })();
