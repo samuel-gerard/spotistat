@@ -136,7 +136,8 @@
 				success: function (response) {
 					$('#login').hide();
 					$('#loggedin').show();
-					retrieveTracks()
+					$('.profil-name').html('Hello ' + response.display_name + ' !')
+					retrieveTracks();
 				}
 			});
 		} else {
@@ -147,22 +148,22 @@
 
 		$('#short_term').on('click', function() {
 			CURRENT_PERIOD = 'short_term';
-			retrieveTracks()
+			retrieveTracks();
 		});
 
 		$('#medium_term').on('click', function() {
 			CURRENT_PERIOD = 'medium_term';
-			retrieveTracks()
+			retrieveTracks();
 		});
 
 		$('#long_term').on('click', function() {
 			CURRENT_PERIOD = 'long_term';
-			retrieveTracks()
+			retrieveTracks();
 		});
 
 		$('#count-tracks').on('change', function() {
-			CURRENT_LIMIT = $('#count-tracks option:selected').val()
-			retrieveTracks()
+			CURRENT_LIMIT = $('#count-tracks option:selected').val();
+			retrieveTracks();
 		});
 
 	}
