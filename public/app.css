@@ -4,6 +4,106 @@
 
 @tailwind utilities;
 
+html, body {
+    height: 100%;
+    font: 1em "Verdana", sans-serif;
+}
+
+body {
+    background-color: #2D336C;
+}
+
+.container {
+    height: 100%;
+}
+
+/* Homepage */
+.top-bar {
+    height: 10px;
+}
+
+.title-bar {
+    font-size: 2.8em;
+    color: white;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.title-bar h1, .title-bar .subtitle {
+    margin-bottom: 0;
+}
+
+.title-bar h1 {
+    font-weight: 900;
+}
+
+.title-bar .subtitle {
+    width: 40%;
+    margin-right: 30%;
+    margin-left: 30%;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.login-btn {
+    font-size: 1.3em;
+    color: white;
+    float: right;
+    text-decoration: none;
+    margin-top: 1%;
+    margin-right: 1%;
+    font-weight: 600;
+}
+
+/* CTA Button */
+.button-cta {
+    display: inline-block;
+    border-radius: 90px;
+    background-color: #1ED760;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 600px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: 900;
+}
+
+.button-cta span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button-cta span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button-cta:hover span {
+    padding-right: 25px;
+}
+
+.button-cta:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* Homepage illustration */
+.img-illustration .music-iso {
+    width: 30%;
+}
+
+/* Top tracks */
 .track-img {
     width: 10%;
 }
