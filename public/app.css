@@ -151,6 +151,10 @@ body {
     font-weight: 900;
 }
 
+#short_term {
+    background-color: black;
+}
+
 /* Grid top tracks */
 .track-img {
     width: 30%;
@@ -168,4 +172,34 @@ body {
 
 .track-info {
     margin-top: 5%;
+}
+
+/* Animated gradient background */
+body {
+    background: linear-gradient(270deg, #2d336c, #540934, #2d336c);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 7s ease infinite;
+    -moz-animation: AnimationName 7s ease infinite;
+    -o-animation: AnimationName 7s ease infinite;
+    animation: AnimationName 7s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 71%}
+    50%{background-position:100% 30%}
+    100%{background-position:0% 71%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 71%}
+    50%{background-position:100% 30%}
+    100%{background-position:0% 71%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 71%}
+    50%{background-position:100% 30%}
+    100%{background-position:0% 71%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 71%}
+    50%{background-position:100% 30%}
+    100%{background-position:0% 71%}
 }

@@ -137,6 +137,7 @@
 					$('#login').hide();
 					$('#loggedin').show();
 					$('.profil-name').html('Hello ' + response.display_name + ' !')
+					$('.profil-name').attr('href', response.external_urls['spotify'])
 					retrieveTracks();
 				}
 			});
@@ -148,16 +149,25 @@
 
 		$('#short_term').on('click', function() {
 			CURRENT_PERIOD = 'short_term';
+			$('#short_term').css('background-color', 'black');
+			$('#medium_term').css('background-color', '#1ED760');
+			$('#long_term').css('background-color', '#1ED760');
 			retrieveTracks();
 		});
 
 		$('#medium_term').on('click', function() {
 			CURRENT_PERIOD = 'medium_term';
+			$('#short_term').css('background-color', '#1ED760');
+			$('#medium_term').css('background-color', 'black');
+			$('#long_term').css('background-color', '#1ED760');
 			retrieveTracks();
 		});
 
 		$('#long_term').on('click', function() {
 			CURRENT_PERIOD = 'long_term';
+			$('#short_term').css('background-color', '#1ED760');
+			$('#medium_term').css('background-color', '#1ED760');
+			$('#long_term').css('background-color', 'black');
 			retrieveTracks();
 		});
 
