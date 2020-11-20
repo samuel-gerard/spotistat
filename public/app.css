@@ -175,10 +175,6 @@ body {
 }
 
 /* Grid top tracks */
-.track-img {
-    width: 30%;
-}
-
 .container-spotistat {
     width: 70%;
     margin-left: 15%;
@@ -191,6 +187,51 @@ body {
 
 .track-info {
     margin-top: 5%;
+    width: 40%;
+    margin: 20px;
+    background-color: #4a5194;
+    opacity: 0.8;
+}
+
+.track-write-info {
+    color: white;
+    width: 58%;
+    float: left;
+    text-align: left;
+    margin: 4%;
+}
+
+.track-write-info .track-position {
+    color: #002761;
+    background-color: #7981CF;
+    width: 70%;
+    font-weight: 900;
+    text-align: center;
+    margin-left: 15%;
+    padding: 1%;
+}
+
+.track-write-info .track-name {
+    font-weight: 900;
+    font-size: 1.2em;
+    margin-top: 5%;
+}
+
+.track-write-info .track-artists {
+    color: rgb(204, 201, 201);
+    font-weight: 600;
+    margin-top: 2%;
+}
+
+.track-write-info .track-link {
+    font-weight: 300;
+    margin-top: 5%;
+}
+
+.track-img {
+    width: 30%;
+    float: rigth;
+    margin: 2%;
 }
 
 /* Animated gradient background */

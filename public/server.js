@@ -78,10 +78,15 @@
 			var trackDiv = document.createElement("div");
 			trackDiv.classList.add('track-info');
 
-			trackDiv.appendChild(displayTrackPosition(i));
-			trackDiv.appendChild(displayTrackName(displayTracks[i]));
-			trackDiv.appendChild(displayTrackArtists(displayTracks[i]));
-			trackDiv.appendChild(displayTrackLink(displayTracks[i]));
+			var trackWriteDiv = document.createElement("div");
+			trackWriteDiv.classList.add('track-write-info');
+
+			trackWriteDiv.appendChild(displayTrackPosition(i));
+			trackWriteDiv.appendChild(displayTrackName(displayTracks[i]));
+			trackWriteDiv.appendChild(displayTrackArtists(displayTracks[i]));
+			trackWriteDiv.appendChild(displayTrackLink(displayTracks[i]));
+
+			trackDiv.appendChild(trackWriteDiv);
 			trackDiv.appendChild(displayTrackImage(displayTracks[i]));
 
 			$('.container-spotistat').append(trackDiv);
