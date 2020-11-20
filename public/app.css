@@ -44,6 +44,8 @@ body {
     text-align: center;
     font-size: 0.8em;
     font-weight: 600;
+    color: rgb(179, 179, 179);
+    font-style: italic;
 }
 
 .login-btn {
@@ -235,6 +237,19 @@ body {
     float: rigth;
     margin: 2%;
     margin-top: 4%;
+}
+
+/* Footer style */
+.footer {
+    height: 4%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.github-link, .paypal-link {
+    color: white;
+    text-decoration: none;
 }
 
 /* Animated gradient background */
