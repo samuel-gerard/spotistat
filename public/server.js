@@ -132,8 +132,8 @@
 		var trackLink = document.createTextNode(' Listen on Spotify');
 		trackLinkDiv.classList.add('track-link');
 
-		$('.track-link').attr('href', trackInfos.link)
-		$('.track-link').attr('target', '_blank')
+		trackLinkDiv.setAttribute('href', trackInfos.link)
+		trackLinkDiv.setAttribute('target', '_blank')
 
 		trackLinkDiv.appendChild(player);
 		trackLinkDiv.appendChild(trackLink);
