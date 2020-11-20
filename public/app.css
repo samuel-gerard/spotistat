@@ -191,6 +191,7 @@ body {
     margin: 20px;
     background-color: #4a5194;
     opacity: 0.8;
+    min-height: 200px;
 }
 
 .track-write-info {
@@ -221,17 +222,19 @@ body {
     color: rgb(204, 201, 201);
     font-weight: 600;
     margin-top: 2%;
+    margin-bottom: 6%;
 }
 
-.track-write-info .track-link {
-    font-weight: 300;
-    margin-top: 5%;
+.track-link {
+    text-decoration: none;
+    color: white;
 }
 
 .track-img {
     width: 30%;
     float: rigth;
     margin: 2%;
+    margin-top: 4%;
 }
 
 /* Animated gradient background */
