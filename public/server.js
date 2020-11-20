@@ -48,10 +48,12 @@
 			let name = trackList[i].name;
 			let images = trackList[i].album.images;
 			let artists = trackList[i].artists;
+			let link = trackList[i].external_urls['spotify']
 
 			track.name = name.toUpperCase()
 			track.image = images[0].url
 			track.artists = '';
+			track.link = link;
 
 			for(let y = 0; y < artists.length; y++)
 			{
@@ -76,8 +78,10 @@
 			var trackDiv = document.createElement("div");
 			trackDiv.classList.add('track-info');
 
+			trackDiv.appendChild(displayTrackPosition(i));
 			trackDiv.appendChild(displayTrackName(displayTracks[i]));
 			trackDiv.appendChild(displayTrackArtists(displayTracks[i]));
+			trackDiv.appendChild(displayTrackLink(displayTracks[i]));
 			trackDiv.appendChild(displayTrackImage(displayTracks[i]));
 
 			$('.container-spotistat').append(trackDiv);
@@ -111,6 +115,26 @@
 		trackArtistsDiv.classList.add('track-artists');
 
 		return trackArtistsDiv;
+	}
+
+	function displayTrackLink(trackInfos)
+	{
+		var trackLinkDiv = document.createElement("div");
+		var trackLink = document.createTextNode(trackInfos.link);
+		trackLinkDiv.appendChild(trackLink);
+		trackLinkDiv.classList.add('track-link');
+
+		return trackLinkDiv;
+	}
+
+	function displayTrackPosition(position)
+	{
+		var trackPositionDiv = document.createElement("div");
+		var trackPosition = document.createTextNode('Top ' + (position + 1));
+		trackPositionDiv.appendChild(trackPosition);
+		trackPositionDiv.classList.add('track-position');
+
+		return trackPositionDiv;
 	}
 
 	function clearStats()
