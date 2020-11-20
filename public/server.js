@@ -138,6 +138,7 @@
 					$('#loggedin').show();
 					$('.profil-name').html('Hello ' + response.display_name + ' !')
 					$('.profil-name').attr('href', response.external_urls['spotify'])
+					$('.user-img').css('background-image', 'url('+response.images[0].url+')')
 					retrieveTracks();
 				}
 			});

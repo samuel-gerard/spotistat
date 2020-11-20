@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="app.css">
-		<title>Spotistat</title>
-	</head>
-	<body>
-		<div class="container">
-			<div id="login">
-				<div class="top-bar">
-					<a href="/login" class="login-btn">Login</a>
-				</div>
-				<div class="title-bar">
-					<h1 class="spotistat-title">SPOTISTAT</h1>
-					<p class="subtitle">Find out which songs you've listened to the most on Spotify !</p>
-					<div class="img-illustration">
-						<img class="music-iso" src="img/music_isometric.svg" alt="">
-					</div>
-					<button href="/login" class="button-cta" style="vertical-align:middle"><span>DISCOVER NOW </span></button>
-				</div>
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="app.css">
+	<title>Spotistat</title>
+</head>
+
+<body>
+	<div class="container">
+		<div id="login">
+			<div class="top-bar">
+				<a href="/login" class="login-btn">Login</a>
 			</div>
-			<div id="loggedin">
-				<a class="profil-name" target="_blank" href=""></a>
-				<div class="title-top-tracks">
-					<h1 class="top-tracks-title">Here’s what you listen</h1>
+			<div class="title-bar">
+				<h1 class="spotistat-title">SPOTISTAT</h1>
+				<p class="subtitle">Find out which songs you've listened to the most on Spotify !</p>
+				<div class="img-illustration">
+					<img class="music-iso" src="img/music_isometric.svg" alt="">
 				</div>
-				<div id="options">
-					<button class="btn" id="short_term">Last Month</button>
-					<button class="btn" id="medium_term">Last 6 Months</button>
-					<button class="btn" id="long_term">All Time</button>
-				</div>
-				<select id="count-tracks" name="count-tracks">
-					<option value="5">Top 5</option>
-					<option value="10" selected="selected">Top 10</option>
-					<option value="25">Top 25</option>
-					<option value="50">Top 50</option>
-				</select>
-				<div class="container-spotistat">
-				</div>
+				<button href="/login" class="button-cta" style="vertical-align:middle"><span>DISCOVER NOW
+					</span></button>
 			</div>
 		</div>
-		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-		<script src="server.js"></script>
-	</body>
+		<div id="loggedin">
+			<div class="user-info">
+				<div class="user-img" alt=""></div>
+				<a class="profil-name" target="_blank" href=""></a>
+			</div>
+			<div class="title-top-tracks">
+				<h1 class="top-tracks-title">Here’s what you listen</h1>
+			</div>
+			<div id="options">
+				<button class="btn" id="short_term">Last Month</button>
+				<button class="btn" id="medium_term">Last 6 Months</button>
+				<button class="btn" id="long_term">All Time</button>
+			</div>
+			<select id="count-tracks" name="count-tracks">
+				<option value="5">Top 5</option>
+				<option value="10" selected="selected">Top 10</option>
+				<option value="25">Top 25</option>
+				<option value="50">Top 50</option>
+			</select>
+			<div class="container-spotistat">
+			</div>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="server.js"></script>
+</body>
+
 </html>
