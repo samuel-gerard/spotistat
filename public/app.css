@@ -63,11 +63,11 @@ body {
     text-align: center;
     font-size: 28px;
     padding: 20px;
-    width: 600px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
     font-weight: 900;
+    width: 50%;
 }
 
 .button-cta span {
@@ -157,13 +157,13 @@ body {
     text-align: center;
     font-size: 14px;
     padding: 12px;
-    width: 300px;
     transition: all 0.5s;
     cursor: pointer;
-    margin-left: 50px;
-    margin-right: 50px;
     margin-bottom: 50px;
     font-weight: 900;
+    width: 20%;
+    margin-left: 5%;
+    margin-right: 2%;
 }
 
 #short_term {
@@ -239,6 +239,7 @@ body {
     color: white;
     text-align: center;
     text-decoration: none;
+    margin-bottom: 1%;
 }
 
 .github-link, .paypal-link {
@@ -275,3 +276,84 @@ body {
     50%{background-position:100% 30%}
     100%{background-position:0% 71%}
 }
+
+/* Responsive design */
+@media (max-width: 800px) {
+
+    .top-tracks-title { 
+        font-size: 3em;
+        width: 80%;
+        margin: 10%;
+    } 
+
+    .user-img {
+        margin-top: 5%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .user-name {
+        font-size: 0.6em;
+    }
+
+    .footer {
+        margin-bottom: 4%;
+    }
+
+    #short_term, #medium_term, #long_term {
+        width: 70%;
+    }
+
+    .spotistat-title {
+        font-size: 80%;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 20%;
+    }
+    
+    .login-btn {
+        font-size: 1em;
+        margin-top: 2%;
+        margin-right: 2%;
+    }
+
+    .title-bar .subtitle {
+        font-size: 0.5em;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+
+    .img-illustration .music-iso {
+        width: 80%;
+        height: 20%;
+    }
+
+    .button-cta {
+        font-size: 40%;
+        width: 70%;
+        padding: 3%;
+        margin-top: 10%;
+        margin-bottom: 15%;
+    }
+
+    /* Grid top tracks */
+    .track-info {
+        width: 100%;
+        min-height: 120px;
+    }
+
+    .track-write-info {
+        font-size: 70%;
+    }
+
+    .track-write-info .track-name {
+        margin-top: 8%;
+    }
+
+    .track-img {
+        margin-top: 10%;
+    }
+
+} 
