@@ -8,14 +8,6 @@ These examples cover:
 * Client Credentials flow
 * Implicit Grant flow
 
-## Request for top artists 
-```php
-curl -X "GET" "https://api.spotify.com/v1/me/top/artists" 
--H "Accept: application/json" 
--H "Content-Type: application/json" 
--H "Authorization: Bearer {{YOUR_ACCESS_TOKEN}}"
-```
-
 ## Installation
 
 These examples run on Node.js. On [its website](http://www.nodejs.org/download/) you can find instructions on how to install it. You can also follow [this gist](https://gist.github.com/isaacs/579814) for a quick and easy way to install Node.js and npm.
@@ -23,6 +15,11 @@ These examples run on Node.js. On [its website](http://www.nodejs.org/download/)
 Once installed, clone the repository and install its dependencies running:
 
     $ npm install
+
+## Setup the configuration file with your credentials
+- At first, copy the configuration example :
+    $ cp config.js.example config.js
+- Then, you need to replace the client id, client secret and the redirect uri by yours.
 
 ### Using your own credentials
 You will need to register your app and get your own credentials from the Spotify for Developers Dashboard.

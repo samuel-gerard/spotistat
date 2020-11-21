@@ -1,0 +1,9 @@
+const client_id = 'example' // Your client id
+const client_secret = 'example'; // Your secret
+const redirect_uri = 'url'; // Your redirect uri
+
+module.exports = {
+    client_id,
+    client_secret,
+    redirect_uri
+}

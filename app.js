@@ -12,9 +12,11 @@ const cors = require('cors');
 const querystring = require('querystring');
 const cookieParser = require('cookie-parser');
 
-var client_id = 'd8a5a397a7b8470e9beb7d2238ac3197' // Your client id
-var client_secret = '922c6c1ffa4a40c58e6a41910903c16d'; // Your secret
-var redirect_uri = 'http://localhost:8888/callback/'; // Your redirect uri
+var config = require('./config.js');
+
+var client_id = config.client_id;
+var client_secret = config.client_secret;
+var redirect_uri = config.redirect_uri;
 
 /**
  * Generates a random string containing numbers and letters
