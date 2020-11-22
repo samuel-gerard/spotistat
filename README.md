@@ -1,5 +1,6 @@
 # Spotistat
-:musical_note: This application allows you to see the songs you have listened to the most on spotify.
+:musical_note: This application allows you to see the songs you have listened to the most on spotify.  
+Discover the app here : https://spotistat.herokuapp.com/
 
 # Spotify Accounts Authentication Examples
 
