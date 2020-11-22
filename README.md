@@ -1,8 +1,11 @@
+# Spotistat
+This application allows you to see the songs you have listened to the most on spotify.
+
 # Spotify Accounts Authentication Examples
 
-This project contains basic demos showing the different OAuth 2.0 flows for [authenticating against the Spotify Web API](https://developer.spotify.com/web-api/authorization-guide/).
+This project is basd on Spotify demos showing the different OAuth 2.0 flows for [authenticating against the Spotify Web API](https://developer.spotify.com/web-api/authorization-guide/).
 
-These examples cover:
+These app use:
 
 * Authorization Code flow
 * Client Credentials flow
@@ -16,10 +19,14 @@ Once installed, clone the repository and install its dependencies running:
 
     $ npm install
 
-## Setup the configuration file with your credentials
-- At first, copy the configuration example :
-    $ cp config.js.example config.js
-- Then, you need to replace the client id, client secret and the redirect uri by yours.
+Then, you need to define the following config vars :
+- CLIENT_ID
+- CLIENT_SECRET
+- REDIRECT_URI
+
+Finally, run the app :
+```node app.js```
+And open `http://localhost:8888` in a browser.
 
 ### Using your own credentials
 You will need to register your app and get your own credentials from the Spotify for Developers Dashboard.
@@ -28,13 +35,3 @@ To do so, go to [your Spotify for Developers Dashboard](https://beta.developer.s
 
 * http://localhost:8888 (needed for the implicit grant flow)
 * http://localhost:8888/callback
-
-Once you have created your app, replace the `client_id`, `redirect_uri` and `client_secret` in the examples with the ones you get from My Applications.
-
-## Running the examples
-In order to run the different examples, open the folder with the name of the flow you want to try out, and run its `app.js` file. For instance, to run the Authorization Code example do:
-
-    $ cd authorization_code
-    $ node app.js
-
-Then, open `http://localhost:8888` in a browser.
