@@ -1,8 +1,4 @@
 (function () {
-	/**
-	 * Obtains parameters from the hash of the URL
-	 * @return Object
-	 */
 
 	var CURRENT_PERIOD = 'short_term';
 	var CURRENT_LIMIT = '10';

@@ -12,15 +12,9 @@ const cors = require('cors');
 const querystring = require('querystring');
 const cookieParser = require('cookie-parser');
 
-var config = require('./config.js');
-
 var client_id = process.env.CLIENT_ID;
 var client_secret = process.env.CLIENT_SECRET;
 var redirect_uri = process.env.REDIRECT_URI;
-
-// var client_id = config.client_id;
-// var client_secret = config.client_secret;
-// var redirect_uri = config.redirect_uri;
 
 /**
  * Generates a random string containing numbers and letters
