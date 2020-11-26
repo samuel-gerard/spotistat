@@ -1,9 +1,10 @@
 # Spotistat
-This application allows you to see the songs you have listened to the most on spotify.
+:musical_note: This application allows you to see the songs you have listened to the most on spotify.  
+Discover the app here : https://spotistat.herokuapp.com/
 
 # Spotify Accounts Authentication Examples
 
-This project is basd on Spotify demos showing the different OAuth 2.0 flows for [authenticating against the Spotify Web API](https://developer.spotify.com/web-api/authorization-guide/).
+This project is based on Spotify demos showing the different OAuth 2.0 flows for [authenticating against the Spotify Web API](https://developer.spotify.com/web-api/authorization-guide/).
 
 These app use:
 
@@ -25,7 +26,9 @@ Then, you need to define the following config vars :
 - REDIRECT_URI
 
 Finally, run the app :
-```node app.js```
+
+    $ node app.js
+    
 And open `http://localhost:8888` in a browser.
 
 ### Using your own credentials
